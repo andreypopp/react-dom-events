@@ -8,15 +8,15 @@ install:
 	npm install
 
 test:
-	@$(BIN)/mocha complex -b -R spec ./spec.js
+	#@$(BIN)/mocha complex -b -R spec ./spec.js
 
-release-patch: build test
+release-patch: test
 	@$(call release,patch)
 
-release-minor: build test
+release-minor: test
 	@$(call release,minor)
 
-release-major: build test
+release-major: test
 	@$(call release,major)
 
 publish:
@@ -31,11 +31,6 @@ define release
   	j.version = \"$$NEXT_VERSION\";\
   	var s = JSON.stringify(j, null, 2);\
   	require('fs').writeFileSync('./package.json', s);" && \
-  node -e "\
-  	var j = require('./bower.json');\
-  	j.version = \"$$NEXT_VERSION\";\
-  	var s = JSON.stringify(j, null, 2);\
-  	require('fs').writeFileSync('./bower.json', s);" && \
-  git commit -m "release $$NEXT_VERSION" -- package.json bower.json && \
+  git commit -m "release $$NEXT_VERSION" -- package.json && \
   git tag "$$NEXT_VERSION" -m "release $$NEXT_VERSION"
 endef
