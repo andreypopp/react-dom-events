@@ -1,0 +1,31 @@
+{
+  "name": "react-dom-events",
+  "version": "0.0.0",
+  "description": "Backbone.View like DOM event delegation for React",
+  "main": "index.js",
+  "dependencies": {},
+  "peerDependencies": {
+    "react-tools": ">= 0.4.1"
+  },
+  "devDependencies": {
+    "mocha": "",
+    "semver": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andreypopp/react-dom-events.git"
+  },
+  "homepage": "https://github.com/andreypopp/react-dom-events",
+  "keywords": [
+    "react",
+    "backbone",
+    "dom",
+    "events"
+  ],
+  "author": {
+    "name": "Andrey Popp",
+    "email": "8mayday@gmail.com",
+    "url": "http://andreypopp.com"
+  },
+  "license": "MIT"
+}
