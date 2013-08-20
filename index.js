@@ -10,7 +10,6 @@ module.exports = {
       }
     }
     if (events === undefined) return;
-    this.undelegateDOMEvents();
 
     var key, method;
     for (key in events) {
