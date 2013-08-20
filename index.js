@@ -1,7 +1,16 @@
 var delegateEventSplitter = /^(\S+)\s*(.*)$/;
 
 module.exports = {
-  delegateDOMEvents: function(events) {
+  delegateDOMEvents: function(spec, handler) {
+    var events;
+
+    if (handler === undefined) {
+      events = spec;
+    } else {
+      events = {};
+      events[spec] = handler;
+    }
+
     if (events === undefined) {
       if (typeof this.events === 'function') {
         events = this.events();
