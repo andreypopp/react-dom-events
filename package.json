@@ -1,6 +1,6 @@
 {
   "name": "react-dom-events",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Backbone.View like DOM event delegation for React",
   "main": "index.js",
   "dependencies": {},
