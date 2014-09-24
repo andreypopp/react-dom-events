@@ -1,5 +1,7 @@
 # react-dom-events
 
+**DO NOT USE THIS**
+
 Backbone.View-like DOM event delegation for React components. Use as a mixin for
 your components:
 
